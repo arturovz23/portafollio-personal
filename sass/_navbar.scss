@@ -1,0 +1,165 @@
+header{
+    //background-color: aqua;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 100%;
+    z-index: 100;
+    
+    .nav-bar{
+        //background-color: red;
+        position: relative;
+        height: 100%;
+        max-width: 1400px;
+        width: 100%; 
+        margin: 0 auto;
+        padding: 0 30px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        border-bottom-width: 2px;
+        border-bottom-color: #C4BFBD;
+        border-bottom-style: solid;
+    }
+    .openMenu{
+        color: var(--color_text);
+        font-size: 25px;
+        padding: 5px;
+        cursor: pointer;
+        display: none;
+
+        @include mobile{
+            display: block;
+        }
+        
+    }
+    .logoMenu a{
+        font-family: $primary-font;
+        font-size: 30px;
+        color: var(--color_text);
+    }
+    .menu{
+        @include mobile{
+            position: fixed;
+            height: 100%;
+            width: 320px; //modificable a pixeles para no abarcar el ancho completo
+            left: -100%;
+            top: 0;
+            padding: 20px;
+            background-color: var(--color_background);
+            z-index: 100;
+            transition: all 0.4s ease;
+        }
+       
+    }
+    
+    .logo-toggle{
+        display: none;
+
+        @include mobile{
+            display: block;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        } 
+    }
+
+    .closeMenu{
+        
+        @include mobile{
+            color: var(--color_text);
+            font-size: 24px;
+            cursor: pointer;
+        }
+    }
+
+    .dot-color{
+        color: var(--color_primary);
+        font-size: 30px;
+    }
+    .nav-links{
+        display: flex;
+        align-items: center;
+
+        @include mobile{
+            flex-direction: column;
+            padding-top: 30px;
+        }
+    }
+    .nav-links li{
+        margin: 0 5px;
+    }
+    .nav-links li a{
+        position: relative;
+        font-size: 17px;
+        font-weight: 500;
+        color: var(--color_text);
+        padding: 10px;
+
+        @include mobile{
+            display: block;
+            margin-top: 10px;
+        }
+    }
+    .nav-links li a::before{
+        content: '';
+        position: absolute;
+        left: 50%;
+        bottom: 0;
+        transform: translateX(-50%);
+        height: 6px;
+        width: 6px;
+        border-radius: 50%;
+        background-color: var(--color_background);
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    .nav-links li:hover a::before{
+        opacity: 100;
+    }
+    .nav-bar .darklight{
+        display: flex;
+        align-items: center;
+        height: 40px;
+        width: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 5px;
+    }
+    .darklight i{
+        position: absolute;
+        color: var(--color_text);
+        font-size: 22px;
+        cursor: pointer ;
+        transition: all 0.3s ease;
+    }
+    .darklight i.sun{
+        opacity: 0;
+        pointer-events: none;
+    }
+    .darklight.active i.sun{
+        opacity: 1;
+        pointer-events: auto;
+    }
+    .darklight.active i.moon{
+        opacity: 0;
+        pointer-events: auto;
+    }
+}
+//MODIFICATIONS TO THE MAIN NAV
+.activar .menu{
+    @include mobile{
+        left: -0%;
+    }
+    
+}
+.activar .nav-bar .logoXl a{
+    @include mobile{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    
+}

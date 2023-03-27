@@ -1,0 +1,101 @@
+/* Hero section */
+.hero{
+    //background-color: red;
+    position: fixed;
+    top: 70px;
+    height: 100%;
+    width: 100%;
+    background: url(/img/hero\ background.svg) no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    
+    .hero-content{
+        margin-top: 200px;
+        // background-color: red;
+        margin-left: 100px;
+        height: 20rem;
+        justify-content: space-between;
+        flex-direction: column;
+        display: flex;
+        
+            
+    }
+    .text-one{
+        // background-color: aqua;
+        font-size: 55px;
+        font-family: $primary-font;
+        color: var(--color_text);
+    }
+    .text-two{
+        // background-color: aquamarine;
+        font-size: 55px;
+        font-family: $primary-font;
+        color: var(--color_text);
+    }
+    .text-three{
+        background-color: white;
+        font-size: 25px;
+        font-family: $primary-font;
+        padding:10px 20px 10px;  
+        width: 70%;
+        color: var(--color_text);
+    }
+    .glass{
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 5px;
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.20);
+    }
+    .btn-cv button{
+        // --background: #275efe;
+        // --rectangle: #184fee;
+        // --success: #{mix(white, #184fee, 20%)};
+        // --text: #fff;
+        // --arrow: #fff;
+        // --checkmark: #fff;
+        // --shadow: rgba(10, 22, 50, .24);
+        // display: flex;
+        // overflow: hidden;
+        // text-decoration: none;
+        // -webkit-mask-image: -webkit-radial-gradient(white, black);
+        // background: var(--background);
+        // border-radius: 8px;
+        // box-shadow: 0 2px 8px -1px var(--shadow);
+        // transition: transform .2s ease, box-shadow .2s ease;
+        font-size: 20px;
+        font-family: $primary-font;
+        padding:10px 20px 10px;  
+        color: var(--color_text);
+        background-color: rgba(255, 255, 255, 0.5);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 5px;
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.20);
+        border-color: var(--color_text);
+        &.dark {
+            --background: #242836;
+            --rectangle: #1C212E;
+            --arrow: #F5F9FF;
+            --text: #F5F9FF;
+            --success: #2F3545;
+        }
+
+    }
+
+     .btn-cv button:hover{
+        transition: all 0.3s ease;
+        background-color:rgba(255, 203, 34, 0.5);
+     }
+
+     .btn-cv button i{
+        margin-right: 10px;
+     }
+}
+
+
