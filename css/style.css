@@ -219,73 +219,103 @@ header .darklight.active i.moon {
   top: 70px;
   height: 100%;
   width: 100%;
-  background: url(/img/hero\ background.svg) no-repeat;
-  background-position: center;
-  background-size: cover;
-  background-attachment: fixed;
-  flex-wrap: wrap;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  background: url(/img/background.svg) no-repeat;
+  /* BOTON ANIMADO */
+  /* FIN DE BOTON ANIMADO */
 }
 .hero .hero-content {
   margin-top: 200px;
-  margin-left: 100px;
-  height: 20rem;
-  justify-content: space-between;
-  flex-direction: column;
-  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .hero .hero-content {
+    margin-top: 100px;
+  }
 }
 .hero .text-one {
-  font-size: 55px;
+  font-size: 64px;
   font-family: "gilroy", sans-serif;
   color: var(--color_text);
 }
 .hero .text-two {
-  font-size: 55px;
+  font-size: 64px;
   font-family: "gilroy", sans-serif;
   color: var(--color_text);
 }
 .hero .text-three {
-  background-color: white;
-  font-size: 25px;
-  font-family: "gilroy", sans-serif;
-  padding: 10px 20px 10px;
-  width: 70%;
+  font-size: 40px;
+  font-family: "Poppins", sans-serif;
   color: var(--color_text);
+  margin-top: 20px;
 }
-.hero .glass {
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 5px;
-  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
+.hero .btn-cv {
+  margin-top: 20px;
 }
-.hero .btn-cv button {
-  font-size: 20px;
-  font-family: "gilroy", sans-serif;
-  padding: 10px 20px 10px;
+.hero .btnanimacion {
+  font-weight: 600;
+  position: relative;
+  display: flex;
+  align-items: center;
   color: var(--color_text);
-  background-color: rgba(255, 255, 255, 0.5);
-  backdrop-filter: blur(10px);
-  -webkit-backdrop-filter: blur(10px);
-  border-radius: 5px;
-  box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2);
-  border-color: var(--color_text);
+  background: none;
+  border: none;
+  padding: 12px 18px;
+  cursor: pointer;
 }
-.hero .btn-cv button.dark {
-  --background: #242836;
-  --rectangle: #1C212E;
-  --arrow: #F5F9FF;
-  --text: #F5F9FF;
-  --success: #2F3545;
+.hero .btnanimacion::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  z-index: -1;
+  translate: calc(200% + 4px) -50%;
+  width: 45px;
+  height: 45px;
+  background: var(--color_primary);
+  border-radius: 50px;
+  transition: translate 0.25s 0.25s cubic-bezier(0, 0, 0.5, 2), width 0.25s cubic-bezier(0, 0, 0.5, 2);
 }
-.hero .btn-cv button:hover {
-  transition: all 0.3s ease;
-  background-color: rgba(255, 203, 34, 0.5);
+.hero .btnanimacion:hover::before {
+  color: var(--color_background);
+  width: 100%;
+  translate: -18px -50%;
+  transition: translate 0.25s cubic-bezier(0, 0, 0.5, 2), width 0.25s 0.25s cubic-bezier(0, 0, 0.5, 2);
 }
-.hero .btn-cv button i {
-  margin-right: 10px;
+.hero .btnanimacion i {
+  margin-left: 5px;
+  transition: translate 0.25s 0.4s cubic-bezier(0, 0, 0.5, 2);
+}
+.hero .btnanimacion:hover i {
+  translate: 3px 0;
+}
+@media screen and (max-width: 768px) {
+  .hero .centrar-contenido {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.hero .hero-img {
+  animation: movimiento 3s normal infinite;
+}
+@keyframes movimiento {
+  0% {
+    transform: translate(0);
+  }
+  20% {
+    transform: translate(-4px, 4px);
+  }
+  40% {
+    transform: translate(-4px, -4px);
+  }
+  60% {
+    transform: translate(4px, 4px);
+  }
+  80% {
+    transform: translate(4px, -4px);
+  }
+  100% {
+    transform: translate(0);
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

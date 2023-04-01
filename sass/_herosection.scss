@@ -1,101 +1,115 @@
 /* Hero section */
 .hero{
-    //background-color: red;
     position: fixed;
     top: 70px;
     height: 100%;
     width: 100%;
-    background: url(/img/hero\ background.svg) no-repeat;
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
+    background: url(/img/background.svg) no-repeat;
     
     .hero-content{
         margin-top: 200px;
-        // background-color: red;
-        margin-left: 100px;
-        height: 20rem;
-        justify-content: space-between;
-        flex-direction: column;
-        display: flex;
-        
-            
+        @include mobile{
+            margin-top: 100px;
+        }
     }
     .text-one{
-        // background-color: aqua;
-        font-size: 55px;
+        font-size: 64px;
         font-family: $primary-font;
         color: var(--color_text);
     }
     .text-two{
-        // background-color: aquamarine;
-        font-size: 55px;
+        font-size: 64px;
         font-family: $primary-font;
         color: var(--color_text);
     }
     .text-three{
-        background-color: white;
-        font-size: 25px;
-        font-family: $primary-font;
-        padding:10px 20px 10px;  
-        width: 70%;
+        font-size: 40px;
+        font-family: $secundary-font; 
         color: var(--color_text);
+        margin-top: 20px;
     }
-    .glass{
-        background-color: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 5px;
-        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.20);
+    .btn-cv{
+        margin-top: 20px;
     }
-    .btn-cv button{
-        // --background: #275efe;
-        // --rectangle: #184fee;
-        // --success: #{mix(white, #184fee, 20%)};
-        // --text: #fff;
-        // --arrow: #fff;
-        // --checkmark: #fff;
-        // --shadow: rgba(10, 22, 50, .24);
-        // display: flex;
-        // overflow: hidden;
-        // text-decoration: none;
-        // -webkit-mask-image: -webkit-radial-gradient(white, black);
-        // background: var(--background);
-        // border-radius: 8px;
-        // box-shadow: 0 2px 8px -1px var(--shadow);
-        // transition: transform .2s ease, box-shadow .2s ease;
-        font-size: 20px;
-        font-family: $primary-font;
-        padding:10px 20px 10px;  
+    
+    /* BOTON ANIMADO */
+    .btnanimacion{
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        align-items: center;
         color: var(--color_text);
-        background-color: rgba(255, 255, 255, 0.5);
-        backdrop-filter: blur(10px);
-        -webkit-backdrop-filter: blur(10px);
-        border-radius: 5px;
-        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.20);
-        border-color: var(--color_text);
-        &.dark {
-            --background: #242836;
-            --rectangle: #1C212E;
-            --arrow: #F5F9FF;
-            --text: #F5F9FF;
-            --success: #2F3545;
+        background: none;
+        border: none;
+        padding: 12px 18px;
+        cursor: pointer;
+    }
+
+    .btnanimacion::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        z-index: -1;
+        translate: calc(200% + 4px) -50%;
+        width: 45px;
+        height: 45px;
+        background: var(--color_primary);
+        border-radius: 50px;
+        transition: translate 0.25s 0.25s cubic-bezier(0, 0, 0.5, 2),
+        width 0.25s cubic-bezier(0, 0, 0.5, 2);
+    }
+
+    .btnanimacion:hover::before{
+        color: var(--color_background);
+        width: 100%;
+        translate: -18px -50%;
+        transition: translate 0.25s cubic-bezier(0, 0, 0.5, 2),
+        width 0.25s 0.25s cubic-bezier(0, 0, 0.5, 2);
+    }
+
+    .btnanimacion i{
+        margin-left: 5px;
+        transition: translate 0.25s 0.4s cubic-bezier(0, 0, 0.5, 2);
+    }
+
+    .btnanimacion:hover i{
+       translate: 3px 0;
+    }
+    /* FIN DE BOTON ANIMADO */
+
+    .centrar-contenido{
+        @include mobile{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
         }
-
     }
 
-     .btn-cv button:hover{
-        transition: all 0.3s ease;
-        background-color:rgba(255, 203, 34, 0.5);
-     }
+    .hero-img{
+        animation: movimiento 3s normal infinite;
+    }
 
-     .btn-cv button i{
-        margin-right: 10px;
-     }
+    @keyframes movimiento {
+        0% {
+            transform: translate(0);
+        }
+        20% {
+            transform: translate(-4px, 4px);
+        }
+        40% {
+            transform: translate(-4px, -4px);
+        }
+        60% {
+            transform: translate(4px, 4px);
+        }
+        80% {
+            transform: translate(4px, -4px);
+        }
+        100% {
+            transform: translate(0);
+        }
+    }
 }
 
 

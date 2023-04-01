@@ -1,6 +1,6 @@
 //VARIABLES
 const body = document.querySelector('body');
-const nav = document.querySelector('nav');
+const header = document.querySelector('header');
 const darkLight = document.querySelector('.darklight');
 const btnOpenMenu = document.querySelector('.openMenu'); 
 const btnCloseMenu = document.querySelector('.closeMenu');
@@ -30,7 +30,8 @@ darkLight.addEventListener('click', () =>{
 
 //JS CODE TO TOGGLE MOVIL MENU
 btnOpenMenu.addEventListener('click', () =>{
-    nav.classList.add("activar");
+    //console.log('Dio clic en el menu');
+    header.classList.add("activar");
     
 });
 
@@ -38,7 +39,7 @@ body.addEventListener('click', e =>{
     let clickedElm = e.target;
 
     if (!clickedElm.classList.contains('openMenu') && !clickedElm.classList.contains('menu')) {
-        nav.classList.remove('activar');
+        header.classList.remove("activar");
     }
 });
 
