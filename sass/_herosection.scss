@@ -76,7 +76,7 @@
     }
 
     .btnanimacion:hover::before{
-        color: var(--color_background);
+        color: var(--color_primary);
         width: 100%;
         translate: -18px -50%;
         transition: translate 0.25s cubic-bezier(0, 0, 0.5, 2),

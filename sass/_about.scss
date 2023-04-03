@@ -6,6 +6,7 @@
     background: url(/img/background_about.svg) no-repeat;
     @include mobile{
         background-position: center center;
+        height: auto;
     }
 
     .about-content{
@@ -20,7 +21,7 @@
         font-family: $primary-font;
         color: var(--color_text);
         @include mobile{
-            font-size: 20px;
+            font-size: 30px;
         }
 
     }
@@ -37,13 +38,13 @@
 
     .about-description{
         @include mobile{
-            font-size: 15px;
+            font-size: 18px;
         }
     }
     .about-quote{
         font-style: italic;
         @include mobile{
-            font-size: 15px;
+            font-size: 18px;
         }
     }
     .blur{

@@ -1,0 +1,126 @@
+.portfolio{
+
+    height: 100%;
+    width: 100%;
+    background: url(/img/background_portfolio.svg) no-repeat;
+    background-size: cover;
+    @include mobile{
+        background-position: right bottom;
+    }
+
+    .portfolio-content{
+        @include mobile{
+            padding-top: 50px;
+        }
+    }
+
+    .title-portfolio{
+        font-size: 40px;
+        font-family: $primary-font;
+        color: var(--color_text);
+        @include mobile{
+            font-size: 30px;
+        }
+    }
+
+    .divisor{
+        border: 1px solid ;
+    }
+
+    .card{
+        width: 22rem;
+        z-index: 0;
+        padding: 25px;
+        background-color: #fafafa10;
+        backdrop-filter: blur(0.4rem);
+        --webkit-backdrop-filter: blur(0.4rem)
+        border: 1px solid rgba(254, 189, 47, 0.1);
+        box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+        
+    }
+
+    .cards-style{
+        padding-top: 75px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .card-title{
+        font-family: $primary-font;
+        color: var(--color_text);
+        font-size: 30px;
+        margin-bottom: 20px;
+        @include mobile{
+            font-size: 26px;
+        }
+    }
+
+    .card-text{
+        font-size: 20px;
+        font-family: $secundary-font;
+        color: var(--color_text);
+        margin-bottom: 20px;
+        @include mobile{
+            font-size: 18px;
+        }
+    }
+
+    //Inicio de animacion
+    .btn-card{
+        font-weight: 600;
+        position: relative;
+        display: flex;
+        align-items: center;
+        color: var(--color_text);
+        background: none;
+        border: none;
+        padding: 18px 30px 18px 0px;
+        cursor: pointer;
+    }
+    .btn-card::before{
+        content: "";
+        position: absolute;
+        top: 50%;
+        z-index: -1;
+        translate: calc(200% + 4px) -50%;
+        width: 45px;
+        height: 45px;
+        background: var(--color_primary);
+        border-radius: 50px;
+        transition: translate 0.25s 0.25s cubic-bezier(0, 0, 0.5, 2),
+        width 0.25s cubic-bezier(0, 0, 0.5, 2);
+    }
+    .btn-card:hover::before{
+        color: var(--color_primary);
+        width: 100%;
+        translate: -18px -50%;
+        transition: translate 0.25s cubic-bezier(0, 0, 0.5, 2),
+        width 0.25s 0.25s cubic-bezier(0, 0, 0.5, 2);
+    }
+    .btn-card i{
+        margin-left: 5px;
+        transition: translate 0.25s 0.4s cubic-bezier(0, 0, 0.5, 2);
+    }
+
+    .btn-card:hover i{
+       translate: 3px 0;
+    }
+    //Fin de boton animado
+    .card-tool{
+        color: var(--color_text);
+    }
+    .card-links{
+        display: flex;
+        //justify-content: space-between;
+        padding: 0;
+        gap: 10px;
+    }
+    .card-links li img{
+        width: 20px;
+        height: 20px;
+    }
+    
+
+}
