@@ -54,7 +54,6 @@ a {
 }
 
 header {
-  position: fixed;
   top: 0;
   left: 0;
   height: 70px;
@@ -215,37 +214,59 @@ header .darklight.active i.moon {
 
 /* Hero section */
 .hero {
-  position: fixed;
-  top: 70px;
   height: 100%;
   width: 100%;
   background: url(/img/background.svg) no-repeat;
+  background-size: cover;
+  background-position: center center;
   /* BOTON ANIMADO */
   /* FIN DE BOTON ANIMADO */
 }
+@media screen and (max-width: 768px) {
+  .hero {
+    background-position: left center;
+  }
+}
 .hero .hero-content {
-  margin-top: 200px;
+  padding-top: 200px;
 }
 @media screen and (max-width: 768px) {
   .hero .hero-content {
-    margin-top: 100px;
+    padding-top: 100px;
   }
 }
 .hero .text-one {
   font-size: 64px;
   font-family: "gilroy", sans-serif;
   color: var(--color_text);
+  letter-spacing: 0.03em;
+}
+@media screen and (max-width: 768px) {
+  .hero .text-one {
+    font-size: 30px;
+  }
 }
 .hero .text-two {
   font-size: 64px;
   font-family: "gilroy", sans-serif;
   color: var(--color_text);
+  letter-spacing: 0.03em;
+}
+@media screen and (max-width: 768px) {
+  .hero .text-two {
+    font-size: 30px;
+  }
 }
 .hero .text-three {
   font-size: 40px;
   font-family: "Poppins", sans-serif;
   color: var(--color_text);
   margin-top: 20px;
+}
+@media screen and (max-width: 768px) {
+  .hero .text-three {
+    font-size: 20px;
+  }
 }
 .hero .btn-cv {
   margin-top: 20px;
@@ -296,6 +317,7 @@ header .darklight.active i.moon {
 }
 .hero .hero-img {
   animation: movimiento 3s normal infinite;
+  padding-bottom: 50px;
 }
 @keyframes movimiento {
   0% {
@@ -315,6 +337,87 @@ header .darklight.active i.moon {
   }
   100% {
     transform: translate(0);
+  }
+}
+
+.about {
+  height: 100%;
+  width: 100%;
+  background: url(/img/background_about.svg) no-repeat;
+}
+@media screen and (max-width: 768px) {
+  .about {
+    background-position: center center;
+  }
+}
+.about .about-content {
+  padding-top: 168px;
+}
+@media screen and (max-width: 768px) {
+  .about .about-content {
+    padding-top: 30px;
+  }
+}
+.about h2 {
+  font-size: 40px;
+  font-family: "gilroy", sans-serif;
+  color: var(--color_text);
+}
+@media screen and (max-width: 768px) {
+  .about h2 {
+    font-size: 20px;
+  }
+}
+.about .about-text {
+  padding: 50px;
+  color: var(--color_text);
+  font-family: "Poppins", sans-serif;
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  .about .about-text {
+    text-align: center;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about .about-description {
+    font-size: 15px;
+  }
+}
+.about .about-quote {
+  font-style: italic;
+}
+@media screen and (max-width: 768px) {
+  .about .about-quote {
+    font-size: 15px;
+  }
+}
+.about .blur {
+  background-color: rgba(250, 250, 250, 0.062745098);
+  backdrop-filter: blur(0.4rem);
+  --webkit-backdrop-filter: blur(0.4rem)
+  border: 1px solid rgba(254, 189, 47, 0.1);
+  box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+  border-radius: 12px;
+}
+.about .container-skills {
+  padding: 50px;
+}
+.about .title-about {
+  padding-bottom: 40px;
+}
+.about .title-skills {
+  padding-bottom: 40px;
+}
+.about .skills-icons {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: start;
+  gap: 40px;
+}
+@media screen and (max-width: 768px) {
+  .about .skills-icons {
+    justify-content: space-between;
   }
 }
 

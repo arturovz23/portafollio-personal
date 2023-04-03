@@ -1,0 +1,77 @@
+.about{
+    //position: fixed;
+    //top: 70px;
+    height: 100%;
+    width: 100%;
+    background: url(/img/background_about.svg) no-repeat;
+    @include mobile{
+        background-position: center center;
+    }
+
+    .about-content{
+        padding-top: 168px;
+        @include mobile{
+            padding-top: 30px;
+        }
+    }
+
+    h2{
+        font-size: 40px;
+        font-family: $primary-font;
+        color: var(--color_text);
+        @include mobile{
+            font-size: 20px;
+        }
+
+    }
+
+    .about-text{
+        padding: 50px;
+        color: var(--color_text);
+        font-family: $secundary-font;
+        font-size: 20px;
+        @include mobile{
+            text-align: center;
+        }
+    }
+
+    .about-description{
+        @include mobile{
+            font-size: 15px;
+        }
+    }
+    .about-quote{
+        font-style: italic;
+        @include mobile{
+            font-size: 15px;
+        }
+    }
+    .blur{
+        background-color: #fafafa10;
+        backdrop-filter: blur(0.4rem);
+        --webkit-backdrop-filter: blur(0.4rem)
+        border: 1px solid rgba(254, 189, 47, 0.1);
+        box-shadow: 0px 4px 9px rgba(0, 0, 0, 0.25);
+        border-radius: 12px;
+    }
+
+    .container-skills{
+        padding: 50px;
+    }
+    .title-about{
+        padding-bottom: 40px;
+    }
+    .title-skills{
+        padding-bottom: 40px;
+    }
+
+    .skills-icons{
+        display: flex;
+        flex-flow: row wrap;
+        justify-content: start;
+        gap: 40px;
+        @include mobile{
+            justify-content: space-between;
+        }
+    }
+}

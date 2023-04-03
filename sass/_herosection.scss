@@ -1,32 +1,48 @@
 /* Hero section */
 .hero{
-    position: fixed;
-    top: 70px;
+    //position: fixed;
+    //top: 70px;
     height: 100%;
     width: 100%;
     background: url(/img/background.svg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    @include mobile{
+        background-position: left center;
+    }
     
     .hero-content{
-        margin-top: 200px;
+        padding-top: 200px;
         @include mobile{
-            margin-top: 100px;
+            padding-top: 100px;
         }
     }
     .text-one{
         font-size: 64px;
         font-family: $primary-font;
         color: var(--color_text);
+        letter-spacing: 0.03em;
+        @include mobile{
+            font-size: 30px;
+        }
     }
     .text-two{
         font-size: 64px;
         font-family: $primary-font;
         color: var(--color_text);
+        letter-spacing: 0.03em;
+        @include mobile{
+            font-size: 30px;
+        }
     }
     .text-three{
         font-size: 40px;
         font-family: $secundary-font; 
         color: var(--color_text);
         margin-top: 20px;
+        @include mobile{
+            font-size: 20px;
+        }
     }
     .btn-cv{
         margin-top: 20px;
@@ -88,6 +104,7 @@
 
     .hero-img{
         animation: movimiento 3s normal infinite;
+        padding-bottom: 50px;
     }
 
     @keyframes movimiento {
