@@ -427,15 +427,18 @@ header .darklight.active i.moon {
   width: 100%;
   background: url(/img/background_portfolio.svg) no-repeat;
   background-size: cover;
+  background-position: center center;
 }
 @media screen and (max-width: 768px) {
   .portfolio {
+    background-size: auto;
     background-position: right bottom;
+    height: auto;
   }
 }
 @media screen and (max-width: 768px) {
   .portfolio .portfolio-content {
-    padding-top: 50px;
+    padding-top: 30px;
   }
 }
 .portfolio .title-portfolio {
@@ -450,6 +453,7 @@ header .darklight.active i.moon {
 }
 .portfolio .divisor {
   border: 1px solid;
+  border-color: var(--color_text);
 }
 .portfolio .card {
   width: 22rem;
@@ -467,6 +471,11 @@ header .darklight.active i.moon {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+@media screen and (max-width: 768px) {
+  .portfolio .cards-style {
+    padding-top: 30px;
+  }
 }
 .portfolio .card-title {
   font-family: "gilroy", sans-serif;
@@ -537,6 +546,36 @@ header .darklight.active i.moon {
 .portfolio .card-links li img {
   width: 20px;
   height: 20px;
+}
+
+.footer {
+  height: 448px;
+  width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .footer .footer-content {
+    padding-top: 100px;
+  }
+}
+.footer .title-footer {
+  font-family: "gilroy", sans-serif;
+  color: var(--color_text);
+}
+.footer .divisor-footer {
+  border: 1px solid;
+  border-color: var(--color_text);
+}
+.footer .social-icons {
+  padding-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding-left: 0;
+}
+@media screen and (max-width: 768px) {
+  .footer .social-icons {
+    justify-content: center;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -1,16 +1,18 @@
 .portfolio{
-
     height: 100%;
     width: 100%;
     background: url(/img/background_portfolio.svg) no-repeat;
     background-size: cover;
+    background-position: center center;
     @include mobile{
+        background-size: auto;
         background-position: right bottom;
+        height: auto;
     }
 
     .portfolio-content{
         @include mobile{
-            padding-top: 50px;
+            padding-top: 30px;
         }
     }
 
@@ -24,7 +26,8 @@
     }
 
     .divisor{
-        border: 1px solid ;
+        border: 1px solid;
+        border-color: var(--color_text);
     }
 
     .card{
@@ -45,6 +48,9 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        @include mobile{
+            padding-top: 30px;
+        }
     }
 
     .card-title{

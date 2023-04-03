@@ -1,0 +1,32 @@
+.footer{
+    height: 448px;
+    width: 100%;
+
+    .footer-content{
+        @include mobile{
+            padding-top: 100px;
+        }
+    }
+
+    .title-footer{
+        font-family: $primary-font;
+        color: var(--color_text);
+    }
+
+    .divisor-footer{
+        border: 1px solid ;
+        border-color: var(--color_text);
+    }
+
+
+    .social-icons{
+        padding-top: 50px;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        padding-left: 0;
+        @include mobile{
+            justify-content: center;
+        }
+    }
+}
