@@ -4,6 +4,7 @@ const header = document.querySelector('header');
 const darkLight = document.querySelector('.darklight');
 const btnOpenMenu = document.querySelector('.openMenu'); 
 const btnCloseMenu = document.querySelector('.closeMenu');
+const abrirCv = document.querySelector('.abrircv');
 
 let getMode = localStorage.getItem('mode'); //get items from local storage
 
@@ -41,6 +42,11 @@ body.addEventListener('click', e =>{
     if (!clickedElm.classList.contains('openMenu') && !clickedElm.classList.contains('menu')) {
         header.classList.remove("activar");
     }
+});
+
+//Abrir link de CV
+abrirCv.addEventListener('click', () =>{
+    window.open("https://drive.google.com/file/d/1s2sYsNd7W7o7O9mY7fuyex8-MNrynTfN/view?usp=sharing", "_blank");
 });
 
 //JS CODE BUTTON EFECT
