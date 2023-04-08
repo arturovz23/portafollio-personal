@@ -73,7 +73,7 @@
         }
     }
 
-    //Inicio de animacion
+    //BUTTON ANIMATION
     .btn-card{
         font-weight: 600;
         position: relative;
@@ -113,7 +113,8 @@
     .btn-card:hover i{
        translate: 3px 0;
     }
-    //Fin de boton animado
+    //BUTTON ANIMATION
+
     .card-tool{
         color: var(--color_text);
     }
@@ -127,6 +128,65 @@
         width: 20px;
         height: 20px;
     }
+
+    /* DESING MODAL */
+    .modal-body{
+        padding: 50px;
+    }
+
+    .imgportfolio{
+        width: 100%;
+    }
+
+    .modal-description{
+        margin-top: 50px;
+    }
+
+    .modal-header{
+        padding-left:50px ;
+    }
+
+    .modal-subtitle{
+        margin-top: 30px;
+        font-family: $primary-font;
+        font-size: 1.25rem;
+    }
+    .modal-description{
+        margin-top: 30px;
+    }
+    .modal-links{
+        color: $primary-color;
+    }
+    .modal-links:hover{
+        color: #dd9a08;
+    }
+
+    .modal-footer{
+        padding-right: 50px;
+    }
+
+    .modal-title{
+        font-family: $primary-font;
+    }
+
+    .modal-content{
+        background-color: var(--color_background);
+        color: var(--color_text);
+    }
     
+    .btn-close{
+        background-color: var(--color_primary);
+    }
+
+    .btn-modal{
+        background-color: var(--color_primary);
+        //color: var(--color_text);
+    }
+
+    .btn-modal:hover{
+        background-color: #f0a912;
+        //color: var(--color_text);
+    }
+    /* DESING MODAL */
 
 }

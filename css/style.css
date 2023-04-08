@@ -32,6 +32,10 @@
   font-family: "Poppins", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   height: 100vh;
   background-color: var(--color_background);
@@ -51,6 +55,29 @@ li {
 
 a {
   text-decoration: none;
+}
+
+/* ANIMACIONES WEB */
+.animacion {
+  opacity: 0;
+  transition: 0.7s ease-in-out all;
+}
+
+.animacion.izquierda {
+  transform: translateX(-100px);
+}
+
+.animacion.derecha {
+  transform: translateX(100px);
+}
+
+.animacion.up {
+  transform: translateY(100px);
+}
+
+.animacion.visible {
+  opacity: 1;
+  transform: translateX(0px) translateY(0px);
 }
 
 header {
@@ -378,6 +405,7 @@ header .darklight.active i.moon {
 @media screen and (max-width: 768px) {
   .about .about-text {
     text-align: center;
+    transform: scale(1);
   }
 }
 @media screen and (max-width: 768px) {
@@ -428,6 +456,8 @@ header .darklight.active i.moon {
   background: url(/img/background_portfolio.svg) no-repeat;
   background-size: cover;
   background-position: center center;
+  /* DESING MODAL */
+  /* DESING MODAL */
 }
 @media screen and (max-width: 768px) {
   .portfolio {
@@ -546,6 +576,51 @@ header .darklight.active i.moon {
 .portfolio .card-links li img {
   width: 20px;
   height: 20px;
+}
+.portfolio .modal-body {
+  padding: 50px;
+}
+.portfolio .imgportfolio {
+  width: 100%;
+}
+.portfolio .modal-description {
+  margin-top: 50px;
+}
+.portfolio .modal-header {
+  padding-left: 50px;
+}
+.portfolio .modal-subtitle {
+  margin-top: 30px;
+  font-family: "gilroy", sans-serif;
+  font-size: 1.25rem;
+}
+.portfolio .modal-description {
+  margin-top: 30px;
+}
+.portfolio .modal-links {
+  color: #FEBD2F;
+}
+.portfolio .modal-links:hover {
+  color: #dd9a08;
+}
+.portfolio .modal-footer {
+  padding-right: 50px;
+}
+.portfolio .modal-title {
+  font-family: "gilroy", sans-serif;
+}
+.portfolio .modal-content {
+  background-color: var(--color_background);
+  color: var(--color_text);
+}
+.portfolio .btn-close {
+  background-color: var(--color_primary);
+}
+.portfolio .btn-modal {
+  background-color: var(--color_primary);
+}
+.portfolio .btn-modal:hover {
+  background-color: #f0a912;
 }
 
 .footer {

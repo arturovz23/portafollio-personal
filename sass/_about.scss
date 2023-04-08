@@ -33,6 +33,7 @@
         font-size: 20px;
         @include mobile{
             text-align: center;
+            transform: scale(1);
         }
     }
 
