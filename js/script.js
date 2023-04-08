@@ -4,7 +4,7 @@ const header = document.querySelector('header');
 const darkLight = document.querySelector('.darklight');
 const btnOpenMenu = document.querySelector('.openMenu'); 
 const btnCloseMenu = document.querySelector('.closeMenu');
-const abrirCv = document.querySelector('.abrircv');
+const openCv = document.querySelector('.opencv');
 
 let getMode = localStorage.getItem('mode'); //get items from local storage
 
@@ -45,7 +45,7 @@ body.addEventListener('click', e =>{
 });
 
 //Abrir link de CV
-abrirCv.addEventListener('click', () =>{
+openCv.addEventListener('click', () =>{
     window.open("https://drive.google.com/file/d/1s2sYsNd7W7o7O9mY7fuyex8-MNrynTfN/view?usp=sharing", "_blank");
 });
 

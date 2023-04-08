@@ -49,7 +49,7 @@
     }
     
     /* BOTON ANIMADO */
-    .btnanimacion{
+    .btnanimation{
         font-weight: 600;
         position: relative;
         display: flex;
@@ -61,7 +61,7 @@
         cursor: pointer;
     }
 
-    .btnanimacion::before{
+    .btnanimation::before{
         content: "";
         position: absolute;
         top: 50%;
@@ -75,7 +75,7 @@
         width 0.25s cubic-bezier(0, 0, 0.5, 2);
     }
 
-    .btnanimacion:hover::before{
+    .btnanimation:hover::before{
         color: var(--color_primary);
         width: 100%;
         translate: -18px -50%;
@@ -83,12 +83,12 @@
         width 0.25s 0.25s cubic-bezier(0, 0, 0.5, 2);
     }
 
-    .btnanimacion i{
+    .btnanimation i{
         margin-left: 5px;
         transition: translate 0.25s 0.4s cubic-bezier(0, 0, 0.5, 2);
     }
 
-    .btnanimacion:hover i{
+    .btnanimation:hover i{
        translate: 3px 0;
     }
     /* FIN DE BOTON ANIMADO */

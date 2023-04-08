@@ -62,20 +62,20 @@ a{
 }
 
 /* ANIMACIONES WEB */
-.animacion{
+.animation{
     opacity: 0;
     transition: .7s ease-in-out all;
 }
-.animacion.izquierda{
+.animation.left{
     transform: translateX(-100px);
 }
-.animacion.derecha{
+.animation.right{
     transform: translateX(100px);
 }
-.animacion.up{
+.animation.up{
     transform: translateY(100px);
 }
-.animacion.visible{
+.animation.visible{
     opacity: 1;
     transform: translateX(0px) translateY(0px);
 }
