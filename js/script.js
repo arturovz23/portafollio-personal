@@ -46,7 +46,7 @@ body.addEventListener('click', e =>{
 
 //Abrir link de CV
 openCv.addEventListener('click', () =>{
-    window.open("https://drive.google.com/file/d/1s2sYsNd7W7o7O9mY7fuyex8-MNrynTfN/view?usp=sharing", "_blank");
+    window.open("https://drive.google.com/file/d/1gmtN6VP3IhhbcJXkK-b8pYRu6vGrsHVm/view?usp=sharing", "_blank");
 });
 
 //JS CODE BUTTON EFECT
