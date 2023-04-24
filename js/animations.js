@@ -4,6 +4,7 @@ const aboutSkills = document.getElementById('aboutSkills');
 const card1 = document.getElementById('card1');
 const card2 = document.getElementById('card2');
 const card3 = document.getElementById('card3');
+const card4 = document.getElementById('card4');
 const footerContent = document.getElementById('footerContent');
 
 
@@ -27,6 +28,7 @@ observador.observe(aboutSkills);
 observador.observe(card1);
 observador.observe(card2);
 observador.observe(card3);
+observador.observe(card4);
 observador.observe(footerContent);
 
 
