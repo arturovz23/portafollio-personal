@@ -19,6 +19,17 @@ header{
         border-bottom-width: 2px;
         border-bottom-color: #C4BFBD;
         border-bottom-style: solid;
+
+        @include mobile{
+            display: flex;
+            padding: 10px 16px;
+            align-items: flex-start;
+        }
+        @include tablet{
+            display: flex;
+            padding: 10px 16px;
+            align-items: flex-start;
+        }
     }
     .openMenu{
         color: var(--color_text);
@@ -30,18 +41,39 @@ header{
         @include mobile{
             display: block;
         }
+        @include tablet{
+            display: block;
+        }
         
     }
     .logoMenu a{
         font-family: $primary-font;
         font-size: 30px;
         color: var(--color_text);
+
+        @include mobile{
+            font-size: 20px;
+        }
+        @include tablet{
+            font-size: 30px;
+        }
     }
     .menu{
         @include mobile{
             position: fixed;
             height: 100%;
-            width: 320px; //modificable a pixeles para no abarcar el ancho completo
+            width: 100%; //320px referencia, modificable a pixeles para no abarcar el ancho completo
+            left: -100%;
+            top: 0;
+            padding: 20px;
+            background-color: var(--color_background);
+            z-index: 100;
+            transition: all 0.4s ease;
+        }
+        @include tablet{
+            position: fixed;
+            height: 100%;
+            width: 100%; //320px referencia,modificable a pixeles para no abarcar el ancho completo
             left: -100%;
             top: 0;
             padding: 20px;
@@ -61,12 +93,24 @@ header{
             display: flex;
             align-items: center;
             justify-content: space-between;
+        }
+        @include tablet{
+            display: block;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         } 
     }
 
     .closeMenu{
         
         @include mobile{
+            color: var(--color_text);
+            font-size: 24px;
+            cursor: pointer;
+        }
+        @include tablet{
             color: var(--color_text);
             font-size: 24px;
             cursor: pointer;
@@ -85,6 +129,10 @@ header{
             flex-direction: column;
             padding-top: 30px;
         }
+        @include tablet{
+            flex-direction: column;
+            padding-top: 30px;
+        }
     }
     .nav-links li{
         margin: 0 5px;
@@ -97,6 +145,10 @@ header{
         padding: 10px;
 
         @include mobile{
+            display: block;
+            margin-top: 10px;
+        }
+        @include tablet{
             display: block;
             margin-top: 10px;
         }
@@ -152,10 +204,16 @@ header{
     @include mobile{
         left: -0%;
     }
-    
+    @include tablet{
+        left: -0%;
+    }
 }
 .activar .nav-bar .logoXl a{
     @include mobile{
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    @include tablet{
         opacity: 0;
         transition: all 0.3s ease;
     }

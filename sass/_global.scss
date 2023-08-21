@@ -52,6 +52,11 @@ body.dark{
     --color_text:#{$text-color-dark};
 }
 
+ul{
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
 li{
     list-style: none;
     text-decoration: none;

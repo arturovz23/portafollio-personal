@@ -44,7 +44,7 @@ body.addEventListener('click', e =>{
     }
 });
 
-//Abrir link de CV
+//OPEN LINK RESUME
 openCv.addEventListener('click', () =>{
     window.open("https://drive.google.com/drive/folders/1SIEgfDvNiijA1ztu_JOwcKJmcrZKpsvo?usp=sharing", "_blank");
 });

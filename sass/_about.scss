@@ -1,18 +1,23 @@
 .about{
-    //position: fixed;
-    //top: 70px;
-    height: 100%;
     width: 100%;
-    background: url(/img/background_about.svg) no-repeat;
+    background: url(/img/background_about.webp) no-repeat;
     @include mobile{
+        background-position: center center;
+        height: auto;
+    }
+    @include tablet{
         background-position: center center;
         height: auto;
     }
 
     .about-content{
-        padding-top: 168px;
+        padding-top: 100px 0px;
         @include mobile{
-            padding-top: 30px;
+            padding: 50px 16px;
+        }
+        @include tablet{
+            padding-top: 50px;
+            padding-bottom: 50px;
         }
     }
 
@@ -21,6 +26,9 @@
         font-family: $primary-font;
         color: var(--color_text);
         @include mobile{
+            font-size: 30px;
+        }
+        @include tablet{
             font-size: 30px;
         }
 
@@ -35,17 +43,27 @@
             text-align: center;
             transform: scale(1);
         }
+        @include mobile{
+            text-align: center;
+            transform: scale(1);
+        }
     }
 
     .about-description{
         @include mobile{
-            font-size: 18px;
+            font-size: 20px;
+        }
+        @include tablet{
+            font-size: 20px;
         }
     }
     .about-quote{
         font-style: italic;
         @include mobile{
-            font-size: 18px;
+            font-size: 20px;
+        }
+        @include tablet{
+            font-size: 20px;
         }
     }
     .blur{
@@ -58,7 +76,13 @@
     }
 
     .container-skills{
-        padding: 50px;
+        padding: 0px 50px 0px;
+        @include tablet{
+            padding: 50px 0;
+        }
+        @include mobile{
+            padding: 50px 0;
+        }
     }
     .title-about{
         padding-bottom: 40px;
@@ -73,6 +97,9 @@
         justify-content: start;
         gap: 40px;
         @include mobile{
+            justify-content: space-between;
+        }
+        @include tablet{
             justify-content: space-between;
         }
     }
